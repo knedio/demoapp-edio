@@ -1,0 +1,14 @@
+<div class="w-full flex flex-col mb-4">
+	<label *ngIf="label != ''" for="firstName">{{ label }}</label>
+	<input
+		[id]="id"
+		class="input-field mt-2 py-2 text-sm"
+		[type]="type"
+		[(ngModel)]="value"
+	/>
+	<app-form-error-message
+		*ngIf="isError"
+		[errors]="errors"
+		[label]="label"
+	></app-form-error-message>
+</div>

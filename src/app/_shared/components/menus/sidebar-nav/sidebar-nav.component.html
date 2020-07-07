@@ -1,0 +1,20 @@
+<div class="flex flex-col min-h-screen clearfix h-full sidebar-container">
+	<div class="sidebar-content flex flex-col w-full h-full">
+		<div class="h-24 justify-center items-center text-base font-bold flex font-display">
+			Engagis Demo App
+		</div>
+		<ul class="border-t border-gray-400 border-solid">
+			<li 
+				*ngFor="let menu of menus; index as i"
+				class="border-b border-gray-400 border-solid text-black cursor-pointer"
+			>
+				<a 
+					class="flex flex-row pl-5 py-3 hover:text-blue-900"
+					[routerLink]="menu.link"
+				>
+					{{ menu.title }}
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>

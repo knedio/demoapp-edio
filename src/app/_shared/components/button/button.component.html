@@ -1,0 +1,16 @@
+<button
+	class="c-btn focus:outline-none focus:shadow-none"
+	[ngClass]="[bg, size, round]"
+	[disabled]="disabled"
+>
+	<div
+		*ngIf="is_loading"
+		class="sm-spinner m-auto" 
+	></div>
+	<span 
+		*ngIf="!is_loading"
+		[ngClass]="[font_size]"
+	>
+		{{ label }}
+	</span>
+</button>

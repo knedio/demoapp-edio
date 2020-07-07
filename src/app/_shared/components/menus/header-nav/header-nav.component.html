@@ -1,0 +1,31 @@
+<div class="w-full flex flex-col">
+	<app-sidebar-nav
+		[menus]="menus"
+		*ngIf="showSidebar"
+	></app-sidebar-nav>
+	<div class="w-full flex flex-row nav-container">
+		<button
+			class="menu-toggle focus:outline-none sm:hidden"
+			[ngClass]="{'hide': showSidebar}"
+			(click)="onChangeSidebar()"
+		>
+			<fa-icon [icon]="onGetToggleIcon()"></fa-icon>
+		</button>
+		<div class="flex self-center nav-logo">
+			<div class="flex self-center justify-center ml-4 w-full">
+				<span class="logo-text">
+					Engagis Demo App
+				</span>
+			</div>
+		</div>
+		<div class="hidden sm:flex flex-row self-center nav-menu">
+			<a 
+				*ngFor="let menu of menus; index as i"
+				class="menu-item font-bold font-display hover:text-blue-900"
+				[routerLink]="menu.link"
+			>
+				{{ menu.title }}
+			</a>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,18 @@
+.sidebar-container {
+	background: rgba(45,44,60, 0.5);
+	
+	.sidebar-content {
+		-webkit-box-shadow: 0 0px 3px #2d2c3c;
+		-moz-box-shadow: 0 0px 3px #2d2c3c;
+		box-shadow: 0 0px 3px #2d2c3c;
+		position: absolute;
+		z-index: 1;
+		background: #fff;
+	}
+}
+
+@media only screen and (max-width: 639px) {
+	.sidebar-content {
+		width: 75%;
+	}
+}

@@ -1,0 +1,48 @@
+<div class="w-full flex flex-col">
+	<swal
+		#processingSwal
+		title="Processing"
+		text="Please wait ..."
+		[allowOutsideClick]="false"
+		[showConfirmButton]="false"
+		icon="warning"
+	></swal>
+	<form
+		class="w-full flex flex-col"
+		[formGroup]="form"
+		(ngSubmit)="onSubmit()"
+	>
+		<div
+			*ngIf="errorMessage != ''"
+			class="text-base text-semibold text-red-700 text-center mb-2"
+		>
+			{{ errorMessage }}
+		</div>
+		<app-form-input-field
+			id="user_email"
+			formControlName="user_email"
+			label="Email Address"
+			[errors]="f.user_email.errors"
+			[isError]="f.user_email.invalid && f.user_email.dirty"
+		></app-form-input-field>
+		<app-form-input-field
+			id="user_fullname"
+			formControlName="user_fullname"
+			label="Full Name"
+			[errors]="f.user_fullname.errors"
+			[isError]="f.user_fullname.invalid && f.user_fullname.dirty"
+		></app-form-input-field>
+		<app-form-input-field
+			id="user_address"
+			formControlName="user_address"
+			label="Address"
+			[errors]="f.user_address.errors"
+			[isError]="f.user_address.invalid && f.user_address.dirty"
+		></app-form-input-field>
+		<app-button
+			class="ml-auto"
+			label="Submit"
+			[disabled]="form.invalid"
+		></app-button>
+	</form>
+</div>

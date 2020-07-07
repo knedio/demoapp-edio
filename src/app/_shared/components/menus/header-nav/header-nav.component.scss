@@ -1,0 +1,42 @@
+.nav-container {
+	height: 70px;
+	-webkit-box-shadow: 0 0px 3px #2d2c3c;
+	-moz-box-shadow: 0 0px 3px #2d2c3c;
+	box-shadow: 0 0px 3px #2d2c3c;
+	
+	.nav-logo {
+		padding: 0px 20px;
+		font-weight: bold;
+		.logo-text {
+			color: #2d2c3c;
+		}
+	}
+	.nav-menu {
+		padding: 0px 20px;
+		margin-left: auto;
+		.menu-item {
+			font-size: 14px;
+			padding: 0px 15px;
+			position: relative;
+		}
+	}
+}
+.menu-toggle {
+	margin-left: 20px;
+	padding: 10px;
+	font-size: 16px;
+}
+@media only screen and (max-width: 639px) {
+	.nav-container {
+		.nav-logo {
+			width: 100%;
+		}
+	}
+	.menu-toggle {
+		top: 16px;
+		position: absolute;
+	}
+	.menu-toggle.hide  {
+		right: 16px;
+	}
+}
