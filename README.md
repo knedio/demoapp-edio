@@ -1,4 +1,4 @@
-# Demoapp
+# Demoapp for Engagis Code Challenge
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.2.
 Demoapp is created as a starting point for the code challenge provided by Engagis to Angular Developer Applicant. Please refer to the instructions given to you in an email.
@@ -27,3 +27,4 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 # demoapp-edio
+# Karl Naio U. Edio
